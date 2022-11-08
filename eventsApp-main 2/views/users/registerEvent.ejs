@@ -1,0 +1,27 @@
+<% layout('/layouts/boilerplate.ejs') %>
+    <div class="flex justify-center items-center h-screen w-full bg-blue-400">
+        <div class="w-1/2 bg-white rounded shadow-2xl p-8 m-4">
+            <h1 class="block w-full text-center text-gray-800 text-2xl font-bold mb-6">Event Registration</h1>
+            <form action="/events/<%= event._id%>/registerEvent" method="post">
+                <div class="flex flex-col mb-4">
+                    <label class="mb-2 font-bold text-lg text-gray-900" for="tl_name">Team Leader Name</label>
+                    <input class="border py-2 px-3 text-grey-800" type="text" name="tl_name" id="tl_name">
+                </div>
+                <div class="flex flex-col mb-4">
+                    <label class="mb-2 font-bold text-lg text-gray-900" for="tl_mail">Team Leader Email</label>
+                    <input class="border py-2 px-3 text-grey-800" type="email" name="tl_mail" id="tl_mail">
+                </div>
+                <div class="flex flex-col mb-4">
+                    <label class="mb-2 font-bold text-lg text-gray-900" for="pl_name">Player Name</label>
+                    <input class="border py-2 px-3 text-grey-800" type="text" name="pl_name" id="pl_name">
+                </div>
+                <div class="flex flex-col mb-4">
+                    <label class="mb-2 font-bold text-lg text-gray-900" for="pl_mail">Player Email</label>
+                    <input class="border py-2 px-3 text-grey-800" type="email" name="pl_mail" id="pl_mail">
+                </div>
+                <button
+                    class="block bg-teal-400 hover:bg-teal-600 text-white uppercase text-lg mx-auto p-4 rounded">Register</button>
+            </form>
+            <!-- <a class="block w-full text-center no-underline mt-4 text-sm text-gray-700 hover:text-gray-900" href="/login">Already have an account?</a> -->
+        </div>
+    </div>

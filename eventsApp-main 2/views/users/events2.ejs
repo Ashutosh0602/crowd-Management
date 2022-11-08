@@ -1,0 +1,28 @@
+<% layout('/layouts/boilerplate.ejs') %>
+    <h1 class="mt-10 mb-2 text-center capitalize text-4xl
+">All Events</h1>
+    <div class="grid grid-cols-1 lg:grid-cols-3 lg:gap-3 justify-items-center mt-10">
+        <% for(let event of events){ %>
+            <div class="py-10">
+                <div class="rounded overflow-hidden shadow-lg max-w-xs">
+                    <img src="<%= event.image.path %>" alt="">
+                    <div class="px-6 py-4">
+                        <div class="text-xl mb-2 font-semibold">
+                            <%= event.name %>
+                        </div>
+                        <p class="text-gray-600">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, similique itaque.
+                            Blanditiis nihil sed repudiandae at, est voluptate quisquam? Quidem, illum quasi. Optio
+                            repellendus earum nulla aspernatur, omnis rem atque.
+                        </p>
+                        <button
+                            class=" mt-2 mx-auto bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                            <a href="/events/<%= event._id %>">View</a>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <% } %>
+
+    </div>
